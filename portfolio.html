@@ -4,7 +4,228 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content ="width=device-width, initial-scale=1.0"/>
     <title>Carlos Sales - Portfolio</title>
+    
 
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg: #ffffff;
+    --surface: #f8fafc;
+    --text: #0f172a;
+    --muted: #64748b;
+    --accent: #2563eb;
+    --border: #e2e8f0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  header {
+    background-color: var(--text);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav {
+    background-color: var(--surface);
+    padding: 12px 20px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  section a {
+    color: #7e13d0;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    text-decoration:double;
+  }
+
+  div a {
+    color: #7e13d0;
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  section {
+    padding: 60px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h1 { margin-bottom: 20px; color: var(--accent); }
+  h2:not(.Title){ margin-bottom: 16px; color: var(--text); text-align:center;}
+  h3 { margin-bottom: 7px; color: var(--text); }
+  h4 { margin-bottom: 7px; color: rgb(97, 150, 200); }
+  h5 { margin-bottom: 7px; color: rgb(97, 150, 200); }
+  h6 { margin-bottom: 5px; color: rgb(97, 150, 200); }
+
+  p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* ── SLIDER ── */
+  .slider-container {
+    display: flex;
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    height: 320px;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .panel {
+    height: 100%;
+    padding: 30px;
+    overflow: hidden;
+    transition: width 0.05s;
+  }
+
+  .panel-left {
+    width: 50%;
+    background-color: #0f172a;
+    color: white;
+  }
+
+  .panel-right {
+    width: 50%;
+    background-color: #1e293b;
+    color: white;
+  }
+
+  .panel h3 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 16px;
+  }
+
+  .panel ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .panel ul li {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .divider {
+    width: 4px;
+    background-color: #2563eb;
+    cursor: ew-resize;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divider-handle {
+    position: absolute;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: -2px;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .Title{
+      margin-bottom: 16px; color: var(--text); 
+  }
+  .project-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+  .project-card:hover{
+    
+    border: 3px solid aquamarine
+  }
+
+.experience-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+  .experience-card:hover{
+    
+    border: 3px solid rgb(68, 37, 225)
+  }
+  .tech-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: #16a34a;
+  border: 1px groove var(--border);
+  border-radius: 5px;
+  color:aliceblue;
+}
+.WIP{
+    background-color: rgba(210, 105, 30, 0.278);
+    border:3px dotted orangered;
+    border-radius: 9px;
+    display:inline-block;
+    color:rgba(52, 114, 231, 0.589);
+    padding: 3px 5px;
+
+}
+
+
+ 
+</style>
 </head>
 <body>  
 
@@ -14,8 +235,11 @@
     </header>
 
     <nav>
-        <a href="https://www.youtube.com" target="_blank">Youtube</a>
+        <a href="https://github.com/lolozin111" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/carlos-sales-56a04433a" target="_blank">LinkedIn</a>
         <a href="#Projects">Projects</a>
+        <a href="Skills">Skills</a>
+        <a href="Experience">Experience</a>
         <a href="#ContactInfo">Contact Me</a>
 
     </nav>
@@ -23,41 +247,84 @@
     <main>
         <section id="Hero">
 
-        <h2>Junior Dev/IT</h2>
+        <h2 class="Title">Junior Dev/IT</h2>
         <p>I'm a developer from Orlando, Florida, I current attend Valencia College for my AA degree in Computer Science, I plan on going for my Bachelors in UCF, I work with C++/Python/JavaScript/CSS/HTML/C#/Lua, currently working on side projects</p>
         <a href="#Projects">Here take a look for yourself!</a>
         </section>
 
         <section id="Skills">
-            <h2>Skills -</h2>
-            <p>C++  |  Python</p>
-            <p>C#   |  JavaScript</p>
-            <p>HTML |  CSS</p>
-            <p>Lua  |  Docker</p>
             
-            <h4>  -  Soft Skills -</h4>
-
-            <p>Fast Learner</p>
-            <p>Pro-Active</p>
-            <p>People Communication/Comprenhesion</p>
-            <p>Teamworker</p>
-
+        <h2>-Skills-</h2>
+    
+    <div class="slider-container">
+            
+        <!-- LEFT SIDE — Backend -->
+     <div class="panel panel-left">
+         <h3>Backend</h3>
+          <ul>
+            <li>C++</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Lua</li>
+            <li>Docker</li>
+            <li>Database Management</li>
+            <li>Memory Management</li>
+            <li>State Handlers</li>
+        </ul>
+     </div>
+ 
+     <!-- THE DRAGGABLE LINE -->
+         <div class="divider" id="divider">
+     <!-- the little handle dots in the middle of the line -->
+             <div class="divider-handle">⋮⋮</div>
+        </div>
+ 
+         <!-- RIGHT SIDE — Frontend -->
+        <div class="panel panel-right">
+         <h3>Frontend</h3>
+            <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+             <li>CSS</li>
+            <li>Responsive Design</li>
+            <li>UI / UX Basics</li>
+         </ul>
+         </div>
+ 
+        </div>
         </section>
         <section id="Projects">
-            <h2>Projects -</h2>
+            <h2>-Projects-</h2>
             <p>Projects that I have been working on!</p>
-
-            <div>
-                <h4>-Bandit Simulator |Roblox|-</h4>
+            
+            
+            <div class="project-card">
+                <h4>Bandit Simulator |Roblox|</h4>
                 <p>A roblox game that was orignally working as a main project to upload to the platform, due to professional matters, I had to put a hault into the project, but from what I worked on, I was able to make an Inventory system, Database management, and with that a memory management to create more effieciency when pulling information from the DB, state handlers, GUI, and many more.</p>
-                <p>you can check out my stuff right here!</p>
-                <a href="https://github.com/lolozin111/Bandit-Fighter" target="_blank">Bandit Figther |repo|</a>
+                <div class="tech-tags">
+                <span class="tag">Lua</span>
+                 <span class="tag">Roblox Studio</span>
+                 <span class="tag">Basic AI</span>
+                 <span class="tag">Memory Management</span>
+                 <span class="tag">UI</span>
+            </div>
+                <a href="https://github.com/lolozin111/Bandit-Fighter" target="_blank">Bandit Figther - Project</a>
+                
             </div>
             
-            <div>
+            
+            <div class ="project-card">
                 <h4>M3 Workorder app</h4>
                 <p>This is still a starting project/contract with  the company M3, where I'm making such SaaS with my work partner Nicolas Weiss Bueno, where we aim to implement a full custom workorder interface with the company needs, as well as a Quote/Invoice mechanism, AI Whatzapp bot to centralize client messages in to just one portal, but not only that but also automatically create work orders and even emergencies regarding the context of the message</p>
-                <a href="#Projects">Checkout the demo right here!</a> <!--Ask nicolas for the links of the demos on his website-->
+                <div class="tech-tags">
+                <span class="tag">HTML</span>
+                 <span class="tag">React</span>
+                 <span class="tag">AI</span>
+                 <span class="tag">Python</span>
+                 <span class="tag">AWS</span>
+                 <span class="tag">Docker</span>    
+            </div>
+                <p class="WIP">Link in progress..</p> <!--Ask nicolas for the links of the demos on his website-->
 
 
             </div>
@@ -65,19 +332,20 @@
         </section>
 
         <section id="Experience">
-            <h2>Work Experience-</h2>
+            <h2>-Work Experience-</h2>
+            <div class="experience-card">
             <h4>Maintenace Tech</h4>
             <h5>Company: BH, Property: The Ivy Residency</h5>
             <h6>from July/2025 until now</h6>
 
             <p>Responsible to take care of one of the buildings in the Ivy Residency property, where I need to troubleshoot any equipment/appliances which are but not limited to: HVAC, Refrigerator, Plumbing related parts, Microwaves, but not only that but also maintain the building it self, so anything ranging from holes in walls, stain in the vinyl, leaks, I'm responsible for such, but I couldn't do it with the amazing team that I currently work with, without them the job wouldn't be the same, and to repay my gratitude I usually help them with all their technical needs regarding, troubleshooting connections problems on their computers, diagnosing issues with components/services, fixing some hardware and many more</p>
-
+            </div>
         </section>
 
         <section id="ContactInfo">
-            <h2>Contact Me</h2>
+            <h2>-Contact Me-</h2>
 
-            <p>if you got it until here, that means I'm more than likely worth your time, and I guarantee I will be a great addition to your team, and I would love to have the pleasure to talk with whoever is behind this amazing screen, so please feel free to reach out to me regarding any questions!, I will see you on my inbox!(or phone)</p>
+            <p>If you got it until here, that means I'm more than likely worth your time, and I guarantee I will be a great addition to your team, and I would love to have the pleasure to talk with whoever is behind this amazing screen, so please feel free to reach out to me regarding any questions!, I will see you on my inbox!(or phone)</p>
             <a href="mailto:carlosroberto_sales@live.com">Email: carlosroberto_sales@live.com</a>
             <p>Phone Number: (689)204-3184</p>
             <a href="https://github.com/lolozin111" target="_blank">GitHub</a>
@@ -92,5 +360,5 @@
 
     
 
-
+<script src="portfolio.js"></script>
 </body>
